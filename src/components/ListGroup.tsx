@@ -1,15 +1,15 @@
 function ListGroup() {
     const items = ['a', 'b', 'c',]
-    if (items.length === 0) {
-        return <p>No item found</p>
-    }
     return (
         <>
-            <ul className="list-group">
-                {items.map(item =>
-                    <li key={item} className="list-group-item">{item}</li>
-                )}
-            </ul>
+            <h1>List</h1>
+            {
+                items.length === 0 ? <p>No item found</p> : <ul className="list-group">
+                    {items.map(item =>
+                        <li key={item} className="list-group-item">{item}</li>
+                    )}
+                </ul>
+            }
         </>
     )
 }
