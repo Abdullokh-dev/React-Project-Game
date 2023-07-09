@@ -7,14 +7,12 @@ interface Props {
     onSelectItem: (item: string) => void;
 }
 function ListGroup({items, heading, onSelectItem}: Props) {
-    // Hook
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     return (
         <>
             <h1>{heading}</h1>
             { items.length === 0 && <p>No item found</p> }
-            {/*<ul className={styles['list-group']}>*/}
                 <ul className={[styles.listGroup, styles.container].join(' ')}>
                 {items.map((item, index) =>
                     <li
